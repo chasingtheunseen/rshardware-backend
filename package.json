@@ -8,12 +8,21 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "mongodb": "^6.16.0",
     "mongoose": "^8.14.1",
     "nodemon": "^3.1.10"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohammedjawadsaleem17/rshardware-backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mohammedjawadsaleem17/rshardware-backend/issues"
+  },
+  "homepage": "https://github.com/mohammedjawadsaleem17/rshardware-backend#readme",
+  "description": ""
 }
