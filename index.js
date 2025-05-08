@@ -3,6 +3,7 @@ const cors = require("cors");
 const app = express();
 app.use(express.json());
 const PORT = 8080;
+const userService = require("./services/userService");
 
 // const corsOptions = {
 //   origin: [
@@ -37,6 +38,11 @@ try {
 }
 
 app.use("/users", userRoutes);
+
+app.get("/invoiceId", async (req, res) => {
+  const count = await userService.getCount();
+  res.status(200).json(count);
+});
 
 app.get("/", (req, res) => {
   res.status(200).json({

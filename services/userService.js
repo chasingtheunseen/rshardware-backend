@@ -58,10 +58,24 @@ const deleteUserById = async (id) => {
   }
 };
 
+const getCount = async () => {
+  try {
+    const counter = await CounterTable.findOne();
+    if (counter) {
+      return counter?.invoiceId + 1;
+    } else {
+      return 0;
+    }
+  } catch (e) {
+    console.log("error");
+  }
+};
+
 module.exports = {
   createUser,
   getAllUsers,
   getUserById,
   updateUserById,
   deleteUserById,
+  getCount,
 };
