@@ -26,7 +26,7 @@ const connectToDB = async () => {
     );
     console.log("DB Connected Successfully SECOND ONE");
   } catch (err) {
-    console.log("Exception Occured");
+    console.log("Exception Occured Here");
   }
 };
 
