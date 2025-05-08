@@ -11,6 +11,7 @@ const corsOptions = {
     // Add any other origins you need to allow
     "https://rshardware.up.railway.app/",
     "https://rshardware.netlify.app/",
+    "https://rshardware.up.railway.app",
   ],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
