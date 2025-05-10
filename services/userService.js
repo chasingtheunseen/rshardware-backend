@@ -22,6 +22,22 @@ const createUser = async (userData) => {
   }
 };
 
+const newCreateUser = async (userData) => {
+  try {
+    let count = await CounterTable.findOne();
+    if (!count) {
+      count = await CounterTable.create({ invoiceId: 1 });
+    } else {
+      count.invoiceId += 1;
+      await count.save();
+    }
+    const user = await User.create(userData);
+    return user;
+  } catch (err) {
+    console.log("Error Creating a User", err);
+  }
+};
+
 const getAllUsers = async () => {
   try {
     const users = await User.find();
@@ -78,4 +94,5 @@ module.exports = {
   updateUserById,
   deleteUserById,
   getCount,
+  newCreateUser,
 };
