@@ -3,6 +3,7 @@ const cors = require("cors");
 const app = express();
 app.use(express.json());
 const PORT = 8080;
+const userService = require("./services/userService");
 
 // const corsOptions = {
 //   origin: [
