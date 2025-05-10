@@ -47,6 +47,11 @@ app.get("/", (req, res) => {
   });
 });
 
+app.get("/invoiceId", async (req, res) => {
+  const count = await userService.getCount();
+  res.status(200).json(count);
+});
+
 app.listen(PORT, () => {
   console.log("Server Started on PORT: " + "http://localhost:" + PORT);
 });
